@@ -12,6 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./leaflet/leaflet.css">
+    <link rel="stylesheet" href="./css/hover-min.css">
     <script src="./leaflet/leaflet.js"></script>
 
 
@@ -31,7 +32,7 @@
             <div class="col-6">
                 <h1>Trippy</h1>
                 <br>
-                <h2>The ideal swiss journey</h2>
+                <h2>Your ideal swiss journey</h2>
             </div>
             <div class="col-3">
             </div>
@@ -42,8 +43,8 @@
                 <div class="row align">
                     <div class="col">
                         <a onclick="includePref('single')">
-                            <div id="single" class="circle">
-                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                            <div id="single" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 40px;vertical-align:middle;padding-top:20px;">
                                     <i class="fas fa-user"></i>
                                 </div>
                             </div>
@@ -52,8 +53,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('family')">
-                            <div id="family" class="circle">
-                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                            <div id="family" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 40px;vertical-align:middle;padding-top:20px;">
                                     <i class="fas fa-users"></i>
                                 </div>
                             </div>
@@ -62,8 +63,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('couple')">
-                            <div id="couple" class="circle">
-                                <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
+                            <div id="couple" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 30px;vertical-align:middle;padding-top:30px;">
                                     <i class="far fa-user"></i>
                                     <i class="far fa-user"></i>
                                 </div>
@@ -75,8 +76,8 @@
                 <div class="row align">
                     <div class="col">
                         <a onclick="includePref('sport')">
-                            <div id="sport" class="circle">
-                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                            <div id="sport" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 40px;vertical-align:middle;padding-top:20px;">
                                     <i class="fas fa-basketball-ball"></i>
                                 </div>
                             </div>
@@ -85,8 +86,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('nature')">
-                            <div id="nature" class="circle">
-                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                            <div id="nature" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 40px;vertical-align:middle;padding-top:20px;">
                                     <i class="fas fa-map-signs"></i>
                                 </div>
                             </div>
@@ -95,8 +96,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('food')">
-                            <div id="food" class="circle">
-                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                            <div id="food" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 40px;vertical-align:middle;padding-top:20px;">
                                     <i class="fas fa-utensils"></i>
                                 </div>
                             </div>
@@ -104,8 +105,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('monuments')">
-                            <div id="monuments" class="circle">
-                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                            <div id="monuments" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 40px;vertical-align:middle;padding-top:20px;">
                                     <i class="fab fa-fort-awesome"></i>
                                 </div>
                             </div>
@@ -115,8 +116,8 @@
                 <div class="row align">
                     <div class="col">
                         <a onclick="includePref('cheap')">
-                            <div id="cheap" class="circle">
-                                <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
+                            <div id="cheap" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 30px;vertical-align:middle;padding-top:30px;">
                                     <i class="fas fa-dollar-sign"></i>
                                 </div>
                             </div>
@@ -124,8 +125,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('normal')">
-                            <div id="normal" class="circle">
-                                <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
+                            <div id="normal" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 30px;vertical-align:middle;padding-top:30px;">
                                     <i class="fas fa-dollar-sign"></i>
                                     <i class="fas fa-dollar-sign"></i>
                                 </div>
@@ -135,8 +136,8 @@
                     </div>
                     <div class="col">
                         <a onclick="includePref('expensive')">
-                            <div id="expensive" class="circle">
-                                <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
+                            <div id="expensive" class="circle hvr-grow">
+                                <div class="animated" style="font-size: 30px;vertical-align:middle;padding-top:30px;">
                                     <i class="fas fa-dollar-sign"></i>
                                     <i class="fas fa-dollar-sign"></i>
                                     <i class="fas fa-dollar-sign"></i>
@@ -147,9 +148,11 @@
                 </div>
                 <div class="row align last-row">
                     <div class="col"></div>
-                    <div class="col"><button class="btn btn-sucess btn-lg">Impress me</button></div>
+                    <div class="col">
+                        <button class="btn btn-sucess btn-lg" onclick="printJson();">Impress me</button>
+                    </div>
                     <div class="col"></div>
-                </div>   
+                </div>
             </div>
         </div>
         <div class="row map">
