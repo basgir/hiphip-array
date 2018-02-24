@@ -2,7 +2,7 @@ import json
 import math
 from pprint import pprint
 import random
-import path_rec
+
 
 
 data = json.load(open('locations.json'))
@@ -98,7 +98,7 @@ paths = []
 for i in range(10):
     path = []
 
-    g
+    
     coordA = [46.2050242,6.1090691,"Geneva"]
     coordB = [47.3774337,8.4666751,"Zurich"]
 
