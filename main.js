@@ -10,7 +10,7 @@ var preferences = new Object();
     preferences.normal = 0;
     preferences.expensive = 0;
 
-function includePref(pref){    
+function includePref(pref){
     if (document.getElementById(pref).className == "selected circle"){
         document.getElementById(pref).className = "circle hvr-grow";
         preferences[pref] = 0;
@@ -23,7 +23,7 @@ function includePref(pref){
 }
 function printJson(){
     return $.ajax({
-        url: 'http://127.0.0.1:5000/inputs',
+        url: 'http://130.82.239.72:5000/inputs',
         type: 'POST',
         data: JSON.stringify(preferences),
     }).done(handleData);
@@ -32,4 +32,4 @@ function printJson(){
 function handleData(data /* , textStatus, jqXHR */ ) {
     console.log(JSON.parse(data));
     //do some stuff
-}  
+}
