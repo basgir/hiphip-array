@@ -1,0 +1,54 @@
+{
+    "cities":{
+        "zurich":{
+            "name": "Zurich",
+            "lat": 47.3774337,
+            "lon": 8.4666751
+        },
+        "geneva":{
+            "name": "Geneva",
+            "lat": 46.2050242,
+            "lon": 6.1090691
+        },
+        "basel":{
+            "name": "Basel",
+            "lat" : 47.5545913,
+            "lon": 7.5594405
+        },
+        "bern":{
+            "name" : "Bern",
+            "lat" : 46.9546486,
+            "lon" : 7.3248302
+        },
+        "lausanne":{
+            "name" : "Lausanne",
+            "lat" : 46.5284586,
+            "lon" : 6.5824551
+        },
+        "lucerne" : {
+            "name" : "Lucern",
+            "lat" : 47.0547335,
+            "lon" : 8.2120935
+        },
+        "st_gallen" : {
+            "name" : "St Gallen",
+            "lat" : 47.4240595,
+            "lon" : 9.3282648
+        },
+        "lugano":{
+            "name" : "Lugano",
+            "lat" : 46.0293391,
+            "lon" : 8.8512377
+        },
+        "fribourg":{
+            "name" : "Fribourg",
+            "lat" : 46.8031637,
+            "lon" : 7.1422124
+        },
+        "thun" : {
+            "name" : "Thun",
+            "lat" : 46.7402046,
+            "lon" : 7.6030997
+        }
+    }
+}
