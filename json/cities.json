@@ -1,0 +1,62 @@
+[
+  {
+    "city": "Zurich",
+    "latitude": 47.3768866,
+    "longitude": 8.541694,
+    "id": 8503000
+  },
+  {
+    "city": "Geneva",
+    "latitude": 46.2043907,
+    "longitude": 6.1431577,
+    "id": 8501008
+  },
+  {
+    "city": "Basel",
+    "latitude": 47.5595986,
+    "longitude": 7.5885761,
+    "id": 8500010
+  },
+  {
+    "city": "Bern",
+    "latitude": 46.9479739,
+    "longitude": 7.4474468,
+    "id": 8507000
+  },
+  {
+    "city": "Lausanne",
+    "latitude": 46.5196535,
+    "longitude": 6.6322734,
+    "id": 8501120
+  },
+  {
+    "city": "Lucerne",
+    "latitude": 47.0501682,
+    "longitude": 8.3093072,
+    "id": 8505000
+  },
+  {
+    "city": "St. Gallen",
+    "latitude": 47.4244818,
+    "longitude": 9.3767173,
+    "id": 8506302
+  },
+  {
+    "city": "Lugano",
+    "latitude": 46.0036778,
+    "longitude": 8.951052,
+    "id": 8505300
+  },
+  {
+    "city": "Fribourg",
+    "latitude": 46.8064773,
+    "longitude": 7.1619719,
+    "id": 8504100
+  },
+  {
+    "city": "Thun",
+    "latitude": 46.7579868,
+    "longitude": 7.6279881,
+    "id": 8507100
+  }
+]
