@@ -2,6 +2,7 @@ import json
 import math
 from pprint import pprint
 import random
+import path_rec
 
 
 data = json.load(open('locations.json'))
@@ -88,18 +89,29 @@ def path_generating (coord1,coord2,L,d):
             path_generating (coord1,coord2,L,d)
 
 
-path = []
-coordA = [46.2050242,6.1090691,"Geneva"]
-coordB = [47.3774337,8.4666751,"Zurich"]
 
-path.append(coordA)
+def generate_loc():
 
-path_generating(coordA, coordB,max_distance,min_distance)
-pprint(path)
+    return []
+
+paths = []
+for i in range(10):
+    path = []
+
+    g
+    coordA = [46.2050242,6.1090691,"Geneva"]
+    coordB = [47.3774337,8.4666751,"Zurich"]
+
+    path.append(coordA)
+
+    path_generating(coordA, coordB,max_distance,min_distance)
+    pprint(path)
+    paths.append(path)
 
     ###
     ###          PATH FITNESS FUNCTION
     ###
+
 
 
 def price_estimate(path):
@@ -110,17 +122,21 @@ def price_estimate(path):
         dist += distance_points(path[i-1],path[i])
 
     price = dist /3.
-    return price
+    return price #in swiss francs
 
 
 def export_geojson(all_paths):
     #This function exports all the paths in a geojson file
+    json_arr = []
+    for path in all_paths:
+        json_obj = {}
+        json_obj["steps"]=path
+        json_obj["price"]=price_estimate(path)
+        json_arr.append(json_obj)
 
-    json_obj = {}
-    json_obj["type"]="FeatureCollection"
-    json_obj["features"]=[]
+    return json_arr
 
-    json_data = json.dumps(json_obj)
-    return json_data
+def run_pathfinder():
+    return export_geojson(paths)
 
-print(price_estimate(path))
+pprint(run_pathfinder())

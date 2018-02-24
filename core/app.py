@@ -4,11 +4,16 @@
 from flask import Flask
 from flask import request
 from flask import json
+from flask import jsonify
+import path
+
+
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Server running!"
+    d = path.run_pathfinder()
+    return jsonify(d)
 
 @app.route("/inputs", methods=["POST"])
 def fetchInputs():
