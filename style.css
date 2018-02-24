@@ -13,10 +13,17 @@ footer{
     height:200px;
     background-color: #fad390; 
 }
-.row{
-    height:150px;
+a, a:hover, a:visited, a:active{
+    text-decoration: none;
+    color:#0a3d62;
 }
-#circle { 
+.row{
+    height:120px;
+}
+.last-row{
+    padding-top: 40px;
+}
+.circle { 
     width: 100px;
     height: 100px;
     background:#fad390; 
@@ -25,10 +32,19 @@ footer{
     border-radius: 50px; 
     margin:auto;
 }
+.circle:hover { 
+    background:#0a3d62;
+    color:#fad390;
+    cursor: pointer; 
+}
+.selected{
+    background:#0a3d62;
+    color:#fad390;
+}
 .title{
     margin:auto;
     text-align: center;
-    height:250px;
+    height:220px;
     font-family: 'Arvo', serif;
 }
 .title > .col-6 > h1{
@@ -45,9 +61,8 @@ footer{
     height: 250px;
 }
 #mapid, .map { 
-    height: 500px;
+    height: 400px;
 }
-
 .map{
     margin-bottom:30px;
 }

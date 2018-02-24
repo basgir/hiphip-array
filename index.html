@@ -1,30 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./leaflet/leaflet.css">
     <script src="./leaflet/leaflet.js"></script>
-    
+
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
 
     <title>Trippy</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container-fluid">
-        
+
         <div class="row title">
             <div class="col-3">
-                
+
             </div>
             <div class="col-6">
                 <h1>Trippy</h1>
@@ -37,114 +39,146 @@
         <div class="row" style="height:480px;margin-bottom:80px;">
             <div class="col-3"></div>
             <div class="col-6">
-            <div class="row align" >
+                <div class="row align">
                     <div class="col">
-                        <div id="circle">
-                            <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                    <i class="fas fa-user"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div id="circle">
-                            <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                    <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div id="circle">
-                            <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                    <i class="far fa-user"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div class="row align">
-                    <div class="col">
-                        <div id="circle">
-                            <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                    <i class="fab fa-accessible-icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div id="circle">
-                            <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                    <i class="fas fa-map-signs"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div id="circle">
-                            <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                    <i class="fas fa-utensils"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                            <div id="circle">
+                        <a onclick="includePref('single')">
+                            <div id="single" class="circle">
                                 <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
-                                        <i class="fab fa-fort-awesome"></i>
+                                    <i class="fas fa-user"></i>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
+                    <div class="col">
+                        <a onclick="includePref('family')">
+                            <div id="family" class="circle">
+                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a onclick="includePref('couple')">
+                            <div id="couple" class="circle">
+                                <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
+                                    <i class="far fa-user"></i>
+                                    <i class="far fa-user"></i>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
                 <div class="row align">
-                        <div class="col">
-                            <div id="circle">
+                    <div class="col">
+                        <a onclick="includePref('sport')">
+                            <div id="sport" class="circle">
+                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                                    <i class="fas fa-basketball-ball"></i>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a onclick="includePref('nature')">
+                            <div id="nature" class="circle">
+                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                                    <i class="fas fa-map-signs"></i>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a onclick="includePref('food')">
+                            <div id="food" class="circle">
+                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a onclick="includePref('monuments')">
+                            <div id="monuments" class="circle">
+                                <div style="font-size: 40px;vertical-align:middle;padding-top:20px;">
+                                    <i class="fab fa-fort-awesome"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row align">
+                    <div class="col">
+                        <a onclick="includePref('cheap')">
+                            <div id="cheap" class="circle">
                                 <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
                                     <i class="fas fa-dollar-sign"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div id="circle">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a onclick="includePref('normal')">
+                            <div id="normal" class="circle">
                                 <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
-                                        <i class="fas fa-dollar-sign"></i>
-                                        <i class="fas fa-dollar-sign"></i>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <i class="fas fa-dollar-sign"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <a onclick="touch(this);">
-                                <div id="circle">
-                                    <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <i class="fas fa-dollar-sign"></i>
-                                    </div>
+
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a onclick="includePref('expensive')">
+                            <div id="expensive" class="circle">
+                                <div style="font-size: 30px;vertical-align:middle;padding-top:30px;">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <i class="fas fa-dollar-sign"></i>
                                 </div>
-                            </a>
-                        </div>
-                </div>  
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row align last-row">
+                    <div class="col"></div>
+                    <div class="col"><button class="btn btn-sucess btn-lg">Impress me</button></div>
+                    <div class="col"></div>
+                </div>   
             </div>
         </div>
         <div class="row map">
             <div class="col-3"></div>
-            <div class="col-6"> 
+            <div class="col-6">
                 <div id="mapid"></div>
                 <div id='map'></div>
             </div>
             <div class="col-3"></div>
-            
+
         </div>
-        
+
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./p5/p5.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="./js/data.js"></script>
     <script src="./main.js"></script>
     <script src="./js/map.js"></script>
-    
+
 </body>
 <footer>
-        
+
 </footer>
+
 </html>
