@@ -37,6 +37,13 @@ a, a:hover, a:visited, a:active{
     color:#fad390;
     cursor: pointer; 
 }
+.btn{
+    font-family: 'Raleway', sans-serif;
+    border-radius: 2rem;
+}
+.btn:focus{
+    box-shadow: 0 0 0 0.2rem #0a3d6280;
+}
 .selected{
     background:#0a3d62;
     color:#fad390;
