@@ -10,7 +10,7 @@ var preferences = new Object();
     preferences.normal = 0;
     preferences.expensive = 0;
 
-function includePref(pref){    
+function includePref(pref){
     if (document.getElementById(pref).className == "selected circle"){
         document.getElementById(pref).className = "circle hvr-grow";
         preferences[pref] = 0;
@@ -39,12 +39,12 @@ var myLine = [{
 }]
 
 function handleData(data /* , textStatus, jqXHR */ ) {
-    for(var i  = 0; i<data.length;i++){
+    /*for(var i  = 0; i<data.length;i++){
         L.marker([data[i].latitude,data[i].longitude], {icon: selectedIcon}).addTo(mymap);
         myLine[0].coordinates.push([data[i].longitude,data[i].latitude]);
     }
     L.geoJSON(myLine, {
         style: myStyle
-    }).addTo(mymap);
+    }).addTo(mymap);*/
     console.log(data);  
 }  

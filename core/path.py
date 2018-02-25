@@ -2,7 +2,6 @@ import json
 import math
 from pprint import pprint
 import random
-import path_rec
 
 
 data = json.load(open('locations.json'))
@@ -95,18 +94,20 @@ def generate_loc():
     return []
 
 paths = []
-for i in range(10):
+pathFound = False
+while (not pathFound):
     path = []
 
-    g
-    coordA = [46.2050242,6.1090691,"Geneva"]
-    coordB = [47.3774337,8.4666751,"Zurich"]
+    coordA = [47.4240595,9.3282648,"St Gallen"]
+    coordB = [46.2050242,6.1090691,"Geneva"]
 
     path.append(coordA)
 
     path_generating(coordA, coordB,max_distance,min_distance)
-    pprint(path)
-    paths.append(path)
+    # pprint(path)
+    if(len(path)==4):
+        pathFound = True
+        paths.append(path)
 
     ###
     ###          PATH FITNESS FUNCTION
@@ -127,14 +128,13 @@ def price_estimate(path):
 
 def export_geojson(all_paths):
     #This function exports all the paths in a geojson file
-    json_arr = []
-    for path in all_paths:
-        json_obj = {}
-        json_obj["steps"]=path
-        json_obj["price"]=price_estimate(path)
-        json_arr.append(json_obj)
 
-    return json_arr
+    path = all_paths[0]
+    json_obj = []
+    json_obj.append({"price":price_estimate(path) ,"steps":{"city":path[2],"latitude":path[0],"longitude":path[1]}})
+
+
+    return json_obj
 
 def run_pathfinder():
     return export_geojson(paths)
