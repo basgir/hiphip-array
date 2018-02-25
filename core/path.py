@@ -130,8 +130,9 @@ def export_geojson(all_paths):
     #This function exports all the paths in a geojson file
 
     path = all_paths[0]
-    json_obj = []
-    json_obj.append({"price":price_estimate(path) ,"steps":{"city":path[2],"latitude":path[0],"longitude":path[1]}})
+    json_obj = {"price":price_estimate(path),"steps":[]}
+    for i in range(len(path)):
+        json_obj["steps"].append({"city": path[i][2],"latitude":path[i][0],"longitude":path[i][1]})
 
 
     return json_obj
