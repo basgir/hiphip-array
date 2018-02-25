@@ -2,7 +2,7 @@ import json
 import math
 from pprint import pprint
 import random
-import path_rec
+
 
 
 data = json.load(open('locations.json'))
@@ -95,7 +95,7 @@ def generate_loc():
     return []
 
 paths = []
-pathFound == False
+pathFound = False
 while (not pathFound):
     path = []
 
@@ -107,7 +107,7 @@ while (not pathFound):
     path_generating(coordA, coordB,max_distance,min_distance)
     # pprint(path)
     if(len(path)==4):
-        pathFound == True;
+        pathFound = True;
         paths.append(path)
 
     ###
