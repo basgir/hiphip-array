@@ -31,8 +31,8 @@ def find_closest_city (coord):
         #Returns: The coordinates of the city and the distance
 
     city_found = False
-    short_dist = 30
-    distance = 60
+    short_dist = 20
+    distance = 50
     closest_coord = []
     for point in list_points:
         distance = math.sqrt((coord[0]-point[0])**2+(coord[1]-point[1])**2)*100
@@ -87,33 +87,25 @@ def path_generating (coord1,coord2,L,d):
         else:
             path_generating (coord1,coord2,L,d)
 
-
-
-def generate_loc():
-
-    return []
-
 paths = []
-def start_app():
-    pathFound = False
-    while (not pathFound):
-        path = []
 
-        coordA = [47.4240595,9.3282648,"St Gallen"]
-        coordB = [46.2050242,6.1090691,"Geneva"]
+for i in range(20):
+    path = []
 
-        path.append(coordA)
+    coordA = [47.4240595,9.3282648,"St Gallen"]
+    coordB = [46.2050242,6.1090691,"Geneva"]
 
-        path_generating(coordA, coordB,max_distance,min_distance)
-        # pprint(path)
-        if(len(path)==4):
-            pathFound = True;
-            paths.append(path)
+    path.append(coordA)
+
+    path_generating(coordA, coordB,max_distance,min_distance)
+    # pprint(path)
+    if(len(path)==4):
+        paths.append(path)
 
     ###
     ###          PATH FITNESS FUNCTION
     ###
-start_app()
+
 
 
 def price_estimate(path):
@@ -137,6 +129,9 @@ def export_geojson(all_paths):
 
 
     return json_obj
+
+def adjust_path():
+    all_paths=all_paths[1::]
 
 def run_pathfinder():
     return export_geojson(paths)
