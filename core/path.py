@@ -32,8 +32,8 @@ def find_closest_city (coord):
         #Returns: The coordinates of the city and the distance
 
     city_found = False
-    short_dist = 20
-    distance = 50
+    short_dist = 30
+    distance = 60
     closest_coord = []
     for point in list_points:
         distance = math.sqrt((coord[0]-point[0])**2+(coord[1]-point[1])**2)*100
@@ -95,25 +95,26 @@ def generate_loc():
     return []
 
 paths = []
-pathFound = False
-while (not pathFound):
-    path = []
+def start_app():
+    pathFound = False
+    while (not pathFound):
+        path = []
 
-    coordA = [47.4240595,9.3282648,"St Gallen"]
-    coordB = [46.2050242,6.1090691,"Geneva"]
+        coordA = [47.4240595,9.3282648,"St Gallen"]
+        coordB = [46.2050242,6.1090691,"Geneva"]
 
-    path.append(coordA)
+        path.append(coordA)
 
-    path_generating(coordA, coordB,max_distance,min_distance)
-    # pprint(path)
-    if(len(path)==4):
-        pathFound = True;
-        paths.append(path)
+        path_generating(coordA, coordB,max_distance,min_distance)
+        # pprint(path)
+        if(len(path)==4):
+            pathFound = True;
+            paths.append(path)
 
     ###
     ###          PATH FITNESS FUNCTION
     ###
-
+start_app()
 
 
 def price_estimate(path):
