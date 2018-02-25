@@ -95,18 +95,20 @@ def generate_loc():
     return []
 
 paths = []
-for i in range(10):
+pathFound == False
+while (not pathFound):
     path = []
 
-
-    coordA = [46.2050242,6.1090691,"Geneva"]
-    coordB = [47.3774337,8.4666751,"Zurich"]
+    coordA = [47.4240595,9.3282648,"St Gallen"]
+    coordB = [46.2050242,6.1090691,"Geneva"]
 
     path.append(coordA)
 
     path_generating(coordA, coordB,max_distance,min_distance)
     # pprint(path)
-    paths.append(path)
+    if(len(path)==4):
+        pathFound == True;
+        paths.append(path)
 
     ###
     ###          PATH FITNESS FUNCTION
@@ -130,7 +132,7 @@ def export_geojson(all_paths):
 
     path = all_paths[0]
     json_obj = []
-    json_obj.append({"city":path[2],"latitude":path[0],"longitude":path[1]})
+    json_obj.append({"price":price_estimate(path) ,"steps":{"city":path[2],"latitude":path[0],"longitude":path[1]}})
 
 
     return json_obj
