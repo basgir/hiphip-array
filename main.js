@@ -22,14 +22,29 @@ function includePref(pref){
     console.log(pref);
 }
 function printJson(){
+    var offset = -20; //Offset of 20px
+
+    $('html, body').animate({
+        scrollTop: $("#journey").offset().top + offset
+    }, 1000);
     return $.ajax({
         url: 'http://127.0.0.1:5000/inputs',
         type: 'POST',
         data: JSON.stringify(preferences),
     }).done(handleData);
 }
+var myLine = [{
+    "type": "LineString",
+    "coordinates": []
+}]
 
 function handleData(data /* , textStatus, jqXHR */ ) {
-    console.log(JSON.parse(data));
-    //do some stuff
+    for(var i  = 0; i<data.length;i++){
+        L.marker([data[i].latitude,data[i].longitude], {icon: selectedIcon}).addTo(mymap);
+        myLine[0].coordinates.push([data[i].longitude,data[i].latitude]);
+    }
+    L.geoJSON(myLine, {
+        style: myStyle
+    }).addTo(mymap);
+    console.log(data);  
 }  

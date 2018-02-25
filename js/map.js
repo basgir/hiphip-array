@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([46.7094552,8.524951], 7);
+var mymap = L.map('mapid').setView([46.7094552, 8.524951], 7);
 var myCities = [];
 var cities;
 
@@ -12,22 +12,30 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var selectedIcon = L.icon({
     iconUrl: './img/logo/selected-icon.png',
 
-    iconSize:     [15, 15], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [3, 3], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    iconSize: [16, 16], // size of the icon
+    shadowSize: [0, 0], // size of the shadow
+    iconAnchor: [8, 8], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0], // the same for the shadow
+    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
-$.getJSON( "./json/cities.json", function(obj) { 
+var myStyle = {
+    "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
+
+$.getJSON("./json/cities.json", function (obj) {
     cities = obj;
     cities.forEach(element => {
         //myCities.push({'type': 'Point', "coordinates": [element.longitude,element.latitude] });
-        L.marker([element.latitude,element.longitude], {icon: selectedIcon}).addTo(mymap);
+        for (var i = 0; i < cities.length; i++) {
+            //L.marker([element.latitude,element.longitude], {icon: selectedIcon}).addTo(mymap);
+        }
+
     });
     myLayer.addData(myCities);
 });
-
 
 var myLayer = L.geoJSON().addTo(mymap);
 myLayer.addData(myCities);

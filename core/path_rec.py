@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics.pairwise import linear_kernel,cosine_similarity
 
 # Load city metadata
-df_cities = pd.read_csv('D:\\Python\\Hackaton\\cities_mockup.csv',
+df_cities = pd.read_csv('./cities_mockup.csv',
                         low_memory=False, delimiter=";")
 
 # load preferences gets replaced by json input

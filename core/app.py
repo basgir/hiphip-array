@@ -15,4 +15,6 @@ def hello():
 
 @app.route("/inputs", methods=["POST"])
 def fetchInputs():
-    return request.get_data() 
+    #return request.get_data()
+    print(citiesJson)
+    return json.jsonify(citiesJson)

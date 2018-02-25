@@ -1,75 +1,136 @@
-body{
+html {
+    min-width: 1130px;
+}
+
+body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color:rgb(255, 246, 245);
-    color:#0a3d62;
+    background-color: rgb(255, 246, 245);
+    color: #0a3d62;
     font-family: 'Calibri', sans-serif;
 }
-h2,h3,h4,h5,p{
+
+h2,
+h3,
+h4,
+h5,
+p {
     font-family: 'Raleway', sans-serif;
 }
-footer{
-    height:200px;
-    background-color: #fad390; 
+
+footer {
+    height: 150px;
+    background-color: #fad390;
+    vertical-align: middle;
+    margin: auto;
+    text-align: center;
 }
-a, a:hover, a:visited, a:active{
+
+.row-footer {
+    padding-top: 50px;
+    color: rgb(255, 246, 245);
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
     text-decoration: none;
-    color:#0a3d62;
+    color: #0a3d62;
 }
-.row{
-    height:120px;
+
+.row {
+    height: 120px;
 }
-.last-row{
+
+.last-row {
     padding-top: 40px;
 }
-.circle { 
+
+.circle {
     width: 100px;
     height: 100px;
-    background:#fad390; 
-    -moz-border-radius: 50px; 
-    -webkit-border-radius: 50px; 
-    border-radius: 50px; 
-    margin:auto;
+    background: #fad390;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: auto;
 }
-.circle:hover { 
-    background:#0a3d62;
-    color:#fad390;
-    cursor: pointer; 
+
+.circle:hover {
+    background: #0a3d62;
+    color: #fad390;
+    cursor: pointer;
 }
-.btn{
+
+.btn {
     font-family: 'Raleway', sans-serif;
     border-radius: 2rem;
 }
-.btn:focus{
+
+.btn:focus {
     box-shadow: 0 0 0 0.2rem #0a3d6280;
 }
-.selected{
-    background:#0a3d62;
-    color:#fad390;
+
+.selected {
+    background: #0a3d62;
+    color: #fad390;
 }
-.title{
-    margin:auto;
+
+.title {
+    margin: auto;
     text-align: center;
-    height:220px;
+    height: 220px;
     font-family: 'Arvo', serif;
 }
-.title > .col-6 > h1{
+
+.second-title {
+    margin: auto;
+    text-align: center;
+    height: 50px;
+    font-family: 'Arvo', serif;
+    margin-bottom: 20px;
+}
+
+.cities-journey {
+    margin: auto;
+    text-align: center;
+    height: 50px;
+    font-family: 'Arvo', serif;
+    margin-bottom: 30px;
+}
+
+.row-price {
+    margin: auto;
+    text-align: center;
+    height: 50px;
+    font-family: 'Arvo', serif;
+    margin-bottom: 30px;
+}
+
+.title>.col-6>h1 {
     padding-top: 60px;
 }
-.icon{
-    color:white;
+
+.icon {
+    color: white;
 }
-.align{
-    margin:auto;
+
+.align {
+    margin: auto;
     text-align: center;
 }
-.map{
+
+.map {
     height: 250px;
 }
-#mapid, .map { 
+
+#mapid,
+.map {
     height: 400px;
 }
-.map{
-    margin-bottom:30px;
+
+.map {
+    margin-bottom: 30px;
 }
