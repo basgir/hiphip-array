@@ -13,7 +13,5 @@ CORS(app)
 
 @app.route("/inputs", methods=["POST"])
 def fetchInputs():
-    d = path.run_pathfinder()
-    print(d)
-    return jsonify(d)
+    return jsonify(path.run_pathfinder())
     # return request.get_data()
