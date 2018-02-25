@@ -131,9 +131,10 @@ def export_geojson(all_paths):
     return json_obj
 
 def adjust_path():
-    all_paths=all_paths[1::]
+    paths=paths[1::]
 
 def run_pathfinder():
     return export_geojson(paths)
 
 pprint(run_pathfinder())
+pprint(paths)
