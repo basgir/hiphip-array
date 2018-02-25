@@ -50,10 +50,10 @@ function handleData(data /* , textStatus, jqXHR */ ) {
     document.getElementById("city2").textContent = data.steps[1].city;
     document.getElementById("city3").textContent = data.steps[2].city;
     document.getElementById("city4").textContent = data.steps[3].city;
-    
+
     for(var i  = 0; i<data.steps;i++){
-        L.marker([data.steps[i].latitude,ata.steps[i].longitude], {icon: selectedIcon}).addTo(mymap);
-        myLine[0].coordinates.push([ata.steps[i].longitude,ata.steps[i].latitude]);
+        L.marker([data.steps[i].latitude,data.steps[i].longitude], {icon: selectedIcon}).addTo(mymap);
+        myLine[0].coordinates.push([data.steps[i].longitude,data.steps[i].latitude]);
     }
     L.geoJSON(myLine, {
         style: myStyle
